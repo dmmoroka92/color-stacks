@@ -3,11 +3,11 @@ import type { BLOCK_COLORS } from "../constants/game"
 export type BlockColor = (typeof BLOCK_COLORS)[number]
 
 export type GameStatus =
+  | null
   | "initializing"  
   | "paused"
   | "ongoing"
   | "finished"
-
 
 export type CylinderBlock = {
   id: string
