@@ -6,6 +6,8 @@ type GameState = {
   moves: number
   makeMove: () => void
   setGameStatus: (status: GameStatus) => void
+  pauseGame: () => void
+  resumeGame: () => void
 }
 
 export const useGameStore = create<GameState>((set) => ({
@@ -18,5 +20,9 @@ export const useGameStore = create<GameState>((set) => ({
 
   setGameStatus: (gameStatus) => set({
     gameStatus
-  })
+  }),
+
+  pauseGame: () => set({ gameStatus: "paused" }),
+  
+  resumeGame: () => set({ gameStatus: "ongoing" })
 }))

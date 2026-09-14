@@ -13,9 +13,7 @@ function App() {
           gameStatus === null && <StartScreen />
         }
 
-        {
-          gameStatus === "ongoing" && <GameScreen />
-        }
+        { gameStatus !== null && <GameScreen /> }
       </div>
     </main>
   )

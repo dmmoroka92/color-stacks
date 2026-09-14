@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { useGameStore } from "../../store/game.store"
 import { GAME_TIME_LIMIT_SECONDS } from "../../constants/game"
+import { useGameStore } from "../../store/game.store"
 
 function GameTimer() {
   const [seconds, setSeconds] = useState<number>(0)
