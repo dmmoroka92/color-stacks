@@ -4,7 +4,6 @@ export type BlockColor = (typeof BLOCK_COLORS)[number]
 
 export type GameStatus =
   | null
-  | "initializing"  
   | "paused"
   | "ongoing"
   | "finished"

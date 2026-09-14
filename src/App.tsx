@@ -1,3 +1,4 @@
+import { GameScreen } from "./components/game/GameScreen"
 import StartScreen from "./components/start/StartScreen"
 import { useGameStore } from "./store/game.store"
 
@@ -13,9 +14,7 @@ function App() {
         }
 
         {
-          gameStatus === "initializing" && (
-            <p>Game initialization...</p>
-          )
+          gameStatus === "ongoing" && <GameScreen />
         }
       </div>
     </main>

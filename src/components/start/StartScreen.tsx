@@ -6,7 +6,7 @@ const StartScreen = () => {
   const setGameStatus = useGameStore(store => store.setGameStatus)
 
   const handleStartGame = () => {
-    setGameStatus("initializing")
+    setGameStatus("ongoing")
   }
 
   return (
