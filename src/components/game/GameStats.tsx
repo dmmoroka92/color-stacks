@@ -1,6 +1,9 @@
+import { useGameStore } from "../../store/game.store"
 import GameTimer from "./GameTimer"
 
 function GameStats() {
+  const moves = useGameStore(store => store.moves)
+
   return (
     <div className="flex items-center overflow-hidden rounded-2xl
       border border-slate-200 bg-white">
@@ -14,7 +17,7 @@ function GameStats() {
         </p>
 
         <p className="mt-1 text-2xl font-bold tabular-nums">
-          0
+          {moves}
         </p>
       </div>
     </div>
